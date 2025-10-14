@@ -1,18 +1,26 @@
+// import { useState } from 'react';
 import './App.css'
-import ItemListContaier from './components/ItemListContainer'
+import ItemCount from './components/ItemCount';
+import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/NavBar';
-function App(){
+import { BrowserRouter, Routes, Route } from 'react-router';
+
+function App() {
   return (
-    // se puede eliminar "section y tener una etiqueta vacia = <> "
-    <section>
-      <div className="box">
-        <h1>Tienda React</h1></div>
-      <div id="div2">
-        <h2>Bienvenidos Clase 2</h2>
-      </div>
-      <Navbar/>
-      <ItemListContaier />
-    </section>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<ItemListContainer greeting={"Tienda de Remeras Dev"} />}
+        />
+        </Route>
+      <Route
+        path="/detail"
+        element={<h2>Detalle</h2>}>
+      </Route>
+    </Routes>
+    </BrowserRouter >
   )
 }
 

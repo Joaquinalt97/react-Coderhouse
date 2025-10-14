@@ -1,11 +1,19 @@
 import Item from "./Item"
+import products from "../data/data"
 
-function ItemListContainer(){
+function ItemListContainer(props) {
+    console.log(products)
     return (
-        <section>
-            <h3>Nuestros Productos</h3>
-            <Item title="Remera Roja JS" price="2000" img= "" />
-            <Item title="Remera React" price="1500" />
+        <section className="ItemList">
+            <h3>-- {props.greeting}</h3>
+            {
+                products.map(item =>
+                    <Item title={item.title}
+                        price={item.price}
+                        stock={item.stock}
+                        img={item.img} />
+                )
+            }
         </section>
     )
 }

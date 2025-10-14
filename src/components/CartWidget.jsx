@@ -1,5 +1,5 @@
 function CartWidget () {
-    return (<div>Icono Carrito</div>)
+    return (<div><img src="/public/images/carrito-de-compras.png" alt="" /></div>)
 }
 
 export default CartWidget;
