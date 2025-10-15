@@ -12,10 +12,10 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<ItemListContainer greeting={"Tienda de Remeras Dev"} />}
+          element={<ItemListContainer greeting={"Tienda de Smartphones"} />}
         />
         <Route
-          path="/detail"
+          path="/detail/:idParam"
           element={<h2>Detalle</h2>}
         />
         <Route

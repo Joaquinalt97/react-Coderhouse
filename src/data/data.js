@@ -120,4 +120,11 @@ const products = [
         img: "/public/images/honor/honor-magic-6-pro.jpg"
     }
 ];
-export default products;
+const getData = () => {
+    return new Promise((resolve) =>{
+        setTimeout(() => {
+            resolve(products);
+        }, 1000);
+    });
+}
+export default getData;
