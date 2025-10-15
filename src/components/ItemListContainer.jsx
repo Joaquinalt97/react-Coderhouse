@@ -1,8 +1,18 @@
 import Item from "./Item"
-import products from "../data/data"
+
+import getData from "../data/data"
+import { useState, useEffect } from "react"
 
 function ItemListContainer(props) {
-    console.log(products)
+    const [products, setProducts] = useState ([]);
+    useEffect(() => {
+        getData()
+        .then( (data) => {
+            console.log("Datos recibidos", data)
+            setProducts(data)
+        })
+    }, [])
+
     return (
         <section className="ItemList">
             <h3>-- {props.greeting}</h3>

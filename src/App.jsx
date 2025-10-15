@@ -14,12 +14,15 @@ function App() {
           path="/"
           element={<ItemListContainer greeting={"Tienda de Remeras Dev"} />}
         />
-        </Route>
-      <Route
-        path="/detail"
-        element={<h2>Detalle</h2>}>
-      </Route>
-    </Routes>
+        <Route
+          path="/detail"
+          element={<h2>Detalle</h2>}
+        />
+        <Route
+          path="*"
+          element={<div><h2>Error 404: No encontramos resultados</h2></div>}
+        />
+      </Routes>
     </BrowserRouter >
   )
 }
