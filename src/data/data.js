@@ -1,6 +1,6 @@
 const products = [
     {
-        id: 1,
+        id: "Iphone",
         title: "Iphone 17",
         categoria: "Smartphone",
         stock: 5,
@@ -121,10 +121,24 @@ const products = [
     }
 ];
 const getData = () => {
-    return new Promise((resolve) =>{
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products);
         }, 1000);
     });
 }
+export function getProductById(idParam) {
+    return new Promise((resolve) => {
+        const itemRequested = products.find((item) => String(item.id) === idParam)
+        setTimeout(() => { resolve(itemRequested) }, 1000)
+    })
+};
+
+export function getProductByCategory(catParam) {
+    return new Promise((resolve) => {
+        const itemsRequested = products.filter( (item) => { return item.category === catParam})
+        setTimeout(() => { resolve(itemsRequested)}, 1000)
+    })
+}
+
 export default getData;

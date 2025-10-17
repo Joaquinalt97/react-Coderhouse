@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import './App.css'
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router';
@@ -12,11 +13,15 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<ItemListContainer greeting={"Tienda de Smartphones"} />}
+          element={ <ItemListContainer greeting={"Tienda de Smartphones"} />}
         />
         <Route
           path="/detail/:idParam"
-          element={<h2>Detalle</h2>}
+          element={ <ItemDetailContainer/> }
+        />
+        <Route
+        path="/category/:catParam"
+        element={ <ItemListContainer greeting="Categoria de Productos"/>}
         />
         <Route
           path="*"

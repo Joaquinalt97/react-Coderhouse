@@ -3,12 +3,12 @@ import { Link } from "react-router";
 function Item(props) {
     console.log(props.title, props.price)
 
-    const texto = `hola soy productos ${props.title}`
+    const texto = `${props.title}`
     return (
         <div className="item-card" style={{ border: "solid, 1px, white", backgroundColor: "black", margin: "2px" }}>
             <img
                 width="120"
-                src={props.img} alt="remera-roja"
+                src={props.img} alt=""
             />
             <h4>{props.title} </h4>
             <p>Precio: $ {props.price} </p>

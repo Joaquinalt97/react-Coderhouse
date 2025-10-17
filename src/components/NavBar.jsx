@@ -10,7 +10,7 @@ function Navbar () {
             <Link to="/category/samsung">Samsung</Link>
             <Link to="/category/iphone">Iphone</Link>
             <Link to="/category/honor">Honor</Link>
-            <Link to="/detail">Detalle</Link> //* link ficticio
+            <Link to="/detail">Detalle</Link> //? ficticio
             </div>
             <CartWidget/>
         </nav>
