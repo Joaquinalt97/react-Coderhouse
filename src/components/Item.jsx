@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import ItemCount from "./ItemCount";
 
 function Item(props) {
     console.log(props.title, props.price)
@@ -15,8 +16,6 @@ function Item(props) {
             <Link to={ `/detail/${props.id}` }>
                 <button>Ver Detalle</button>
             </Link>
-
-            <small>{texto}</small>
         </div>
     )
 }

@@ -28,7 +28,8 @@ function ItemDetailContainer() {
                         />
                         <h4>{itemData.title}</h4>
                         <p>Precio: $ {itemData.price}</p>
-                        <ItemCount />
+                        <ItemCount product={itemData} />
+                        {/* <button onClick={() => addItem(itemdata, 1)}>Agregar al carrito</button> */}
                     </div>
             }
         </div>
