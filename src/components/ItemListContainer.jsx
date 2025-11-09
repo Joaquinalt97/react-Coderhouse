@@ -1,7 +1,7 @@
-import Item from "./Item"
-import getData, { getProductByCategory } from "../data/data"
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import Item from "./Item";
+import getData, { getProductByCategory } from "../data/data";
 
 function ItemListContainer(props) {
     const [products, setProducts] = useState([]);

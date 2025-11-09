@@ -4,9 +4,8 @@ import ItemCount from "./ItemCount";
 function Item(props) {
     console.log(props.title, props.price)
 
-    const texto = `${props.title}`
     return (
-        <div className="item-card" style={{ border: "solid, 1px, white", backgroundColor: "black", margin: "2px" }}>
+        <div className="item-card" style={{ border: "1px solid white", backgroundColor: "black", margin: "2px" }}>
             <img
                 width="120"
                 src={props.img} alt=""
@@ -21,6 +20,3 @@ function Item(props) {
 }
 
 export default Item;
-
-//* REUTILIZABLE (Debemos tratar de Reutilizar el Codigo de Una Tarjeta por EJ).
-//* props: Propiedades o atributos que le pasamos al componente, para diferenciarlos del resto o hacerlo que cambie de alguna manera.

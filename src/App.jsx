@@ -4,7 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { CartContextProvider } from './context/cartContext';
-import Cartcontainer from './components/CartContainer';
+import CartContainer from './components/CartContainer';
 
 function App() {
 
@@ -42,5 +42,3 @@ function App() {
 }
 
 export default App;
-//SnakeCase (La primer letra va con minuscula. ej : ItemListContainer)
-//CamelCase (la primer letra de la palabra lleva minuscula. ej : itemListContainer)
