@@ -145,4 +145,5 @@ export function getProductByCategory(catParam) {
     });
 }
 
+export {products}
 export default getData;

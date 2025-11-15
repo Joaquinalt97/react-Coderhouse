@@ -1,8 +1,38 @@
 import { useContext } from "react";
 import cartContext from "../context/cartContext";
+import { createBuyOrder } from "../data/FirestoreService";
+import "./CartContainer.css"
 
 function CartContainer() {
     const { cart, removeItem, clearCart } = useContext(cartContext);
+
+    const total = cart.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
+
+    async function handleCheckout() {
+        const orderData = {
+            buyer: {
+                name: "????",
+                email: "???@gmail.com",
+                phone: "111-111"
+            },
+            cart,
+            total: total,
+            date: new Date(),
+        };
+
+        if (orderData) {
+            const Response = await createBuyOrder(orderData);
+
+            alert(`Gracias por tu compra! 🎉\nID de tu pedido: ${Response.id}`);
+
+            clearCart();
+        } else {
+            alert("Hubo un error al procesar tu compra.");
+        }
+    }
 
     return (
         <section style={{ textAlign: "center", padding: "20px" }}>
@@ -16,7 +46,7 @@ function CartContainer() {
                         <div
                             key={item.id}
                             style={{
-                                backgroundColor: "#111",
+                                backgroundColor: "color: white",
                                 color: "white",
                                 margin: "10px auto",
                                 padding: "10px",
@@ -29,9 +59,19 @@ function CartContainer() {
                             <p>Precio: ${item.price}</p>
                             <p>Cantidad: {item.quantity}</p>
                             <p>Total: ${item.price * item.quantity}</p>
-                            <button onClick={() => removeItem(item.id)}>Eliminar</button>
+
+                            <button onClick={() => removeItem(item.id)}>
+                                Eliminar
+                            </button>
                         </div>
                     ))}
+
+                    <h2>Total de tu compra: ${total}</h2>
+
+                    <button onClick={handleCheckout} style={{ marginTop: "20px" }}>
+                        Confirmar compra
+                    </button>
+
                     <button onClick={clearCart} style={{ marginTop: "20px" }}>
                         Vaciar carrito
                     </button>

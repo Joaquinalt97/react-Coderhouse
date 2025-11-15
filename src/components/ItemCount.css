@@ -1,0 +1,67 @@
+.itemcount-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.itemcount-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.itemcount-controls button {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+    font-weight: bold;
+}
+
+.itemcount-controls button:hover {
+    transform: scale(1.1);
+    background-color: #1e90ff;
+    color: white;
+}
+
+.itemcount-controls p {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.itemcount-message {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.itemcount-message.limit {
+    color: red;
+}
+
+.itemcount-message.added {
+    color: lime;
+}
+
+.itemcount-addbtn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+    font-weight: bold;
+}
+
+.itemcount-addbtn:hover {
+    background-color: #1e90ff;
+    color: white;
+}

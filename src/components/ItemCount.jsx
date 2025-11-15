@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import cartContext from "../context/cartContext";
+import "./ItemCount.css";
 
 function ItemCount({ product }) {
     const [count, setCount] = useState(1);
@@ -31,7 +32,6 @@ function ItemCount({ product }) {
         setAdded(true);
         setCount(1);
 
-        // mensaje temporal de confirmación
         setTimeout(() => setAdded(false), 2000);
     }
 

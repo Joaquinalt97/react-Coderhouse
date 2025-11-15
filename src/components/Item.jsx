@@ -1,11 +1,12 @@
 import { Link } from "react-router";
 import ItemCount from "./ItemCount";
+import "./Item.css"
 
 function Item(props) {
     console.log(props.title, props.price)
 
     return (
-        <div className="item-card" style={{ border: "1px solid white", backgroundColor: "black", margin: "2px" }}>
+        <div className="item-card" >
             <img
                 width="120"
                 src={props.img} alt=""

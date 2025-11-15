@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
 import { useParams } from "react-router";
-import { getProductById } from "../data/data";
+import { getProductById } from "../data/FirestoreService";
 import { GridLoader } from "react-spinners";
 
 function ItemDetailContainer() {
