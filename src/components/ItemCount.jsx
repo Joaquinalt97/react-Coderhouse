@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import cartContext from "../context/cartContext";
+import cartContext from "../context/CartContext";
 import "./ItemCount.css";
 
 function ItemCount({ product }) {

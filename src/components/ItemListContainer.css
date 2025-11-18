@@ -9,7 +9,6 @@
     margin-bottom: 20px;
 }
 
-/* GRID DE PRODUCTOS */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -18,7 +17,6 @@
     padding: 10px;
 }
 
-/* ANIMACIÓN SUAVE EN APARICIÓN */
 .product-grid > * {
     opacity: 0;
     transform: translateY(10px);

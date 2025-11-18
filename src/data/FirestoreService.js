@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getDocs, getDoc, getFirestore, query, where, addDoc } from "firebase/firestore";
-import {products} from "./data";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC9iJ17BpXLO6HifKg78nJFrmtDYU-0qI0",
@@ -55,7 +54,7 @@ export async function createBuyOrder(orderData) {
 export async function exportProducts() {
     const productsRef = collection(db, "products")
 
-    for (let item of products) {
+    for (let item of db) {
         console.log("Exportando:", item.image)
         delete item.id;
         const newDoc = await addDoc(productsRef, item)
